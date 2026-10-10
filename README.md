@@ -49,10 +49,61 @@ OmniCorp has 500 employees and relies heavily on an enterprise Identity Provider
 - *Give every external account a sponsor and an enforced end date*
 
 
+**Part 3:  Building the Identity Governance an Administration(IGA) Identity Lifecycle and Access Review Lab. Build an automated group-based lifecycle structure, provision a test contractor, assign group-based permissions, and execute an instant offboarding kill-switch**
+
+- Create a Lifecycle Security Group: instead of managing permissions user-by-user (which leads to orphaned accounts and permission creep), enterprise governance requires group-based access control
+
+![screenshots](Lifecycle-SG/SG-Temporary-Contractors-Group.png)
+
+
+- Provision a Test Lifecycle User (The Joiner) simulating a new contractor joining OmniCorp by creating a user account with a governance-controlled identity profile and automatically assigning the user to the appropriate contractor security group
+
+
+![screenshots](Lifecycle-SG/SG-Temporary-Contractor-User.png) 
+
+
+![screenshots](Lifecycle-SG/SG-Temporary-Contractor-User-Group.png)
+
+
+- Map Group-Based Resource Access (Simulating Entitlements) demonstrating how permissions scale securely via groups rather than individual assignments. Assign an application to the group so the user automatically inherit all permissions attach to that group 
+
+![screenshots](Lifecycle-SG/SG-Temporary-Contractor-User-Account.png)
+
+
+*the user automatically inherits all permissions to applications assigned to their security group*
+
+![screenshots](Lifecycle-SG/SG-Temporary-Contractor-User-Assigned-Application.png)
+
+
+- Execute the Instant Offboarding (The Leaver / Kill-Switch): simulate the end of the contractor's lifecycle when their contract terminates or audit flags require an immediate lockdown.
+
+*the user logged in to the provisioned user account*
+
+![screenshot](Lifecycle-SG/SG-Temporary-Contractor-User-Signin.png)
+
+*the user's access was revoked after the account was deprovisioned*
+
+![screenshot](Lifecycle-SG/SG-Temporary-Contractor-User-Revoked-Access.png)
 
 
 
 
+## Core Lessons
+
+- **Least Privilege (PoLP)**: users should hold only the entitlements their current role requires. Excess privileged access (Prod-Database-Admin on a marketing account) expands the attack surface and risks data exfiltration and PII exposure.
+
+
+- **Joiner-Mover-Leaver (JML) Lifecycle**: provision access by role (RBAC), with approval (joiner), trigger a review on role change to prevent privilege creep (Mover), deprovision immediately on termination to prevent orphaned accounts (Leaver)
+
+- **Dormant Account Management**: accounts inactive beyond a defined threshold (60-90 days) should be disabled, with shorter windows for privileged and third-party accounts to reduce unauthorized access risks.
+
+- **Segregation of Duties (SoD)**: no single identity should hold conflicting entitlements (full access to both the CRM and billing systems). This principle prevents conflicting permissions that could enable fraud or unauthorized actions.
+
+
+
+## Key Takeaway
+
+Effective access governance reduces excessive privileges, unauthorized access, insider threats, and compliance risks through regular access reviews and timely remediation
 
 
 
