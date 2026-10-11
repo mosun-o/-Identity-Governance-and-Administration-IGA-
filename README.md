@@ -91,7 +91,7 @@ OmniCorp has 500 employees and relies heavily on an enterprise Identity Provider
 
 
 
-## Core Lessons
+## Core Lessons Learned 
 
 - **Least Privilege (PoLP)**: users should hold only the entitlements their current role requires. Excess privileged access (Prod-Database-Admin on a marketing account) expands the attack surface and risks data exfiltration and PII exposure.
 
