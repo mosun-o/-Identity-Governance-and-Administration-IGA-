@@ -81,7 +81,14 @@ OmniCorp has 500 employees and relies heavily on an enterprise Identity Provider
 
 ![screenshot](Lifecycle-SG/SG-Temporary-Contractor-User-Signin.png)
 
-*the user's access was revoked after the account was deprovisioned*
+
+
+
+
+*the user's access was revoked after the account was deprovisioned, simulating the immediate offboarding of the contractor*
+
+
+
 
 ![screenshot](Lifecycle-SG/SG-Temporary-Contractor-User-Revoked-Access.png)
 
