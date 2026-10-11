@@ -19,7 +19,6 @@ OmniCorp has 500 employees and relies heavily on an enterprise Identity Provider
 
 *OmniCorp uses Workday, a software tool, as the authoritative HR data source classified as a Human Resources Information System (HRIS)*
 
-*SCIM (System for Cross-domain Identity Management): the identity provisioning protocol that allows OmniCorp's IdP to automatically create, update, and deactivate employee accounts in connected SaaS applications as part of the Joiner-Mover-Leaver lifecycle*
 
 | **Classification** | **Trigger Source** | **Action Taken (automated workflow)** | **System of Record** | 
 | ----  | ------- | --------- | -------- | 
@@ -29,6 +28,8 @@ OmniCorp has 500 employees and relies heavily on an enterprise Identity Provider
 
 
 - Why the Mover (Internal Transfer) workflow prevents permission creep: access is assigned based on user attributes and role requirements rather than standing manual exceptions. Because group memberships are rule based, updating a user's attributes triggers the removal of access no longer required and the assignment of access appropriate to the new role. This supports the principle of least privilege by ensuring users retain only the access necessary for their current responsibilities.
+
+*SCIM (System for Cross-domain Identity Management): the identity provisioning protocol that allows OmniCorp's IdP to automatically create, update, and deactivate employee accounts in connected SaaS applications as part of the Joiner-Mover-Leaver lifecycle*
 
 
 **Part 2: Performing an Access Certification and Audit Campaign**
